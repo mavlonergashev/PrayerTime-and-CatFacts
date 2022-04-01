@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		01C111E964CBF3E7CF78092F /* Pods_PrayerTime.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C239F086C7C876337CF894F /* Pods_PrayerTime.framework */; };
 		04D52BBF27F6CCA4007D1146 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D52BBE27F6CCA4007D1146 /* AppDelegate.swift */; };
 		04D52BC827F6CCA4007D1146 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04D52BC727F6CCA4007D1146 /* Assets.xcassets */; };
 		04D52BCB27F6CCA4007D1146 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04D52BC927F6CCA4007D1146 /* LaunchScreen.storyboard */; };
@@ -28,6 +29,9 @@
 		04D52BD827F6CD31007D1146 /* MainVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainVC.xib; sourceTree = "<group>"; };
 		04D52BDB27F6CDA7007D1146 /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
 		04D52BDC27F6CDA7007D1146 /* SettingsVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsVC.xib; sourceTree = "<group>"; };
+		0BA376CABCB1CD4536413C0C /* Pods-PrayerTime.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PrayerTime.release.xcconfig"; path = "Target Support Files/Pods-PrayerTime/Pods-PrayerTime.release.xcconfig"; sourceTree = "<group>"; };
+		1626B576B9CFBD7F60D1E4B5 /* Pods-PrayerTime.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PrayerTime.debug.xcconfig"; path = "Target Support Files/Pods-PrayerTime/Pods-PrayerTime.debug.xcconfig"; sourceTree = "<group>"; };
+		3C239F086C7C876337CF894F /* Pods_PrayerTime.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PrayerTime.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +39,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01C111E964CBF3E7CF78092F /* Pods_PrayerTime.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -46,6 +51,8 @@
 			children = (
 				04D52BBD27F6CCA4007D1146 /* PrayerTime */,
 				04D52BBC27F6CCA4007D1146 /* Products */,
+				88A377E7E5568F30B89EB014 /* Pods */,
+				D53AA2AC5CAF34851412797E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,6 +104,24 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		88A377E7E5568F30B89EB014 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1626B576B9CFBD7F60D1E4B5 /* Pods-PrayerTime.debug.xcconfig */,
+				0BA376CABCB1CD4536413C0C /* Pods-PrayerTime.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		D53AA2AC5CAF34851412797E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3C239F086C7C876337CF894F /* Pods_PrayerTime.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -104,9 +129,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 04D52BCF27F6CCA4007D1146 /* Build configuration list for PBXNativeTarget "PrayerTime" */;
 			buildPhases = (
+				40B384A5024EE1F5749B6747 /* [CP] Check Pods Manifest.lock */,
 				04D52BB727F6CCA3007D1146 /* Sources */,
 				04D52BB827F6CCA3007D1146 /* Frameworks */,
 				04D52BB927F6CCA3007D1146 /* Resources */,
+				DE0E69FE68BD5EDE8CB9A560 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -163,6 +190,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		40B384A5024EE1F5749B6747 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PrayerTime-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DE0E69FE68BD5EDE8CB9A560 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PrayerTime/Pods-PrayerTime-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PrayerTime/Pods-PrayerTime-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PrayerTime/Pods-PrayerTime-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		04D52BB727F6CCA3007D1146 /* Sources */ = {
@@ -308,6 +377,7 @@
 		};
 		04D52BD027F6CCA4007D1146 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1626B576B9CFBD7F60D1E4B5 /* Pods-PrayerTime.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -337,6 +407,7 @@
 		};
 		04D52BD127F6CCA4007D1146 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0BA376CABCB1CD4536413C0C /* Pods-PrayerTime.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
