@@ -6,6 +6,9 @@
 //
 
 import UIKit
+import Alamofire
+import SwiftyJSON
+import SwiftSpinner
 
 class MainVC: UIViewController {
     
@@ -20,9 +23,43 @@ class MainVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        getPrayerTime(location: "Tashkent")
     }
 
 
+}
+
+//MARK: - Get Times
+
+extension MainVC {
+    
+    func getPrayerTime(location: String) {
+        
+        let url = "https://api.pray.zone/v2/times/today.json?"
+        
+        let params = [
+            "city" : location
+        ]
+        
+        let request = AF.request(url, parameters: params)
+        request.response { response in
+            if let data = response.data {
+                
+                let jsonData = JSON(data)
+                self.cityNameLbl.text = jsonData["results"]["location"]["city"].stringValue
+                self.dateLbl.text = jsonData["results"]["datetime"][0]["date"]["gregorian"].stringValue
+                self.fajrTime.text = jsonData["results"]["datetime"][0]["times"]["Fajr"].stringValue
+                self.sunriseTime.text = jsonData["results"]["datetime"][0]["times"]["Sunrise"].stringValue
+                self.dhuhrTime.text = jsonData["results"]["datetime"][0]["times"]["Dhuhr"].stringValue
+                self.asrTime.text = jsonData["results"]["datetime"][0]["times"]["Asr"].stringValue
+                self.maghribTime.text = jsonData["results"]["datetime"][0]["times"]["Maghrib"].stringValue
+                self.ishaaTime.text = jsonData["results"]["datetime"][0]["times"]["Isha"].stringValue
+                
+            } else {
+                print("Response unsuccesful:", response.error.debugDescription)
+            }
+        }
+        
+    }
+    
 }

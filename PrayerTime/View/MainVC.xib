@@ -31,27 +31,27 @@
                     <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                 </imageView>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="bottom" spacing="130" translatesAutoresizingMaskIntoConstraints="NO" id="QKg-WH-pJ2">
-                    <rect key="frame" x="244.5" y="74" width="139.5" height="399"/>
+                    <rect key="frame" x="245" y="74" width="139" height="399"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="BNG-9a-qJs">
-                            <rect key="frame" x="0.0" y="0.0" width="139.5" height="71"/>
+                            <rect key="frame" x="4.5" y="0.0" width="134.5" height="71"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tashkent" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U3B-zS-seJ">
-                                    <rect key="frame" x="0.0" y="0.0" width="139.5" height="42"/>
-                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="35"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="134.5" height="42"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="35"/>
                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="April 1, 2022" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UMs-b4-dSC">
-                                    <rect key="frame" x="0.0" y="42" width="139.5" height="29"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                    <rect key="frame" x="0.0" y="42" width="134.5" height="29"/>
+                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="24"/>
                                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                             </subviews>
                         </stackView>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="GR7-aD-YbN">
-                            <rect key="frame" x="0.5" y="201" width="139" height="198"/>
+                            <rect key="frame" x="0.0" y="201" width="139" height="198"/>
                             <subviews>
                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="Qdq-j2-3Yo">
                                     <rect key="frame" x="0.0" y="0.0" width="139" height="20.5"/>
