@@ -43,6 +43,9 @@ extension MainVC {
         
         let request = AF.request(url, parameters: params)
         request.response { response in
+            
+            SwiftSpinner.show("Loading")
+            
             if let data = response.data {
                 
                 let jsonData = JSON(data)
@@ -55,8 +58,11 @@ extension MainVC {
                 self.maghribTime.text = jsonData["results"]["datetime"][0]["times"]["Maghrib"].stringValue
                 self.ishaaTime.text = jsonData["results"]["datetime"][0]["times"]["Isha"].stringValue
                 
+                SwiftSpinner.hide()
+                
             } else {
                 print("Response unsuccesful:", response.error.debugDescription)
+                SwiftSpinner.hide()
             }
         }
         
