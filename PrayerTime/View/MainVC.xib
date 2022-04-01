@@ -11,6 +11,14 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainVC" customModule="PrayerTime" customModuleProvider="target">
             <connections>
+                <outlet property="asrTime" destination="28N-vG-Xo0" id="4TJ-f6-ucf"/>
+                <outlet property="cityNameLbl" destination="U3B-zS-seJ" id="qBd-dL-PmP"/>
+                <outlet property="dateLbl" destination="UMs-b4-dSC" id="Iuk-Zr-6nE"/>
+                <outlet property="dhuhrTime" destination="Y7S-e8-vcT" id="Nza-3e-ZUa"/>
+                <outlet property="fajrTime" destination="SfW-K5-3TF" id="XGZ-d7-v1K"/>
+                <outlet property="ishaaTime" destination="thR-g6-EJm" id="Z32-M5-32P"/>
+                <outlet property="maghribTime" destination="ytl-P0-1gd" id="8Lm-OM-L6h"/>
+                <outlet property="sunriseTime" destination="nlt-SU-72c" id="yfj-mT-PRE"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
