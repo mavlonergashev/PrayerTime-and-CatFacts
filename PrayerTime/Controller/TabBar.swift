@@ -12,6 +12,10 @@ class TabBar: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+//        self.tabBar.backgroundColor = .blue
+        self.tabBar.barTintColor = .white
+        self.tabBar.tintColor = .white
+        
         let vc1 = MainVC(nibName: "MainVC", bundle: nil)
         let navVC1 = UINavigationController(rootViewController: vc1)
         let tabBarItem1 = UITabBarItem(title: "Main Menu", image: UIImage(systemName: "house"), selectedImage: nil)
