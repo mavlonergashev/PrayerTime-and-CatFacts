@@ -23,7 +23,7 @@ class MainVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        getPrayerTime(location: "Tashkent")
+        getPrayerTime(city: "Tashkent", country: "Uzbekistan")
     }
 
 
@@ -33,12 +33,15 @@ class MainVC: UIViewController {
 
 extension MainVC {
     
-    func getPrayerTime(location: String) {
+    func getPrayerTime(city: String, country: String) {
         
-        let url = "https://api.pray.zone/v2/times/today.json?"
+        let url = "http://api.aladhan.com/v1/timingsByCity?"
         
         let params = [
-            "city" : location
+            "city" : city,
+            "country" : country,
+            "method" : "13",
+            "school" : "1"
         ]
         
         let request = AF.request(url, parameters: params)
