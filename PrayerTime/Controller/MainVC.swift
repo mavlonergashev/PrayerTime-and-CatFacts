@@ -52,14 +52,14 @@ extension MainVC {
             if let data = response.data {
                 
                 let jsonData = JSON(data)
-                self.cityNameLbl.text = jsonData["results"]["location"]["city"].stringValue
-                self.dateLbl.text = jsonData["results"]["datetime"][0]["date"]["gregorian"].stringValue
-                self.fajrTime.text = jsonData["results"]["datetime"][0]["times"]["Fajr"].stringValue
-                self.sunriseTime.text = jsonData["results"]["datetime"][0]["times"]["Sunrise"].stringValue
-                self.dhuhrTime.text = jsonData["results"]["datetime"][0]["times"]["Dhuhr"].stringValue
-                self.asrTime.text = jsonData["results"]["datetime"][0]["times"]["Asr"].stringValue
-                self.maghribTime.text = jsonData["results"]["datetime"][0]["times"]["Maghrib"].stringValue
-                self.ishaaTime.text = jsonData["results"]["datetime"][0]["times"]["Isha"].stringValue
+                self.cityNameLbl.text =  "Tashkent" //jsonData["data"]["location"]["city"].stringValue
+                self.dateLbl.text = jsonData["data"]["date"]["readable"].stringValue
+                self.fajrTime.text = jsonData["data"]["timings"]["Fajr"].stringValue
+                self.sunriseTime.text = jsonData["data"]["timings"]["Sunrise"].stringValue
+                self.dhuhrTime.text = jsonData["data"]["timings"]["Dhuhr"].stringValue
+                self.asrTime.text = jsonData["data"]["timings"]["Asr"].stringValue
+                self.maghribTime.text = jsonData["data"]["timings"]["Maghrib"].stringValue
+                self.ishaaTime.text = jsonData["data"]["timings"]["Isha"].stringValue
                 
                 SwiftSpinner.hide()
                 
