@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		01C111E964CBF3E7CF78092F /* Pods_PrayerTime.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C239F086C7C876337CF894F /* Pods_PrayerTime.framework */; };
+		04C3F3F927FE2ED300DF2F31 /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C3F3F727FE2ED300DF2F31 /* Cell.swift */; };
+		04C3F3FA27FE2ED300DF2F31 /* Cell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04C3F3F827FE2ED300DF2F31 /* Cell.xib */; };
 		04D52BBF27F6CCA4007D1146 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D52BBE27F6CCA4007D1146 /* AppDelegate.swift */; };
 		04D52BC827F6CCA4007D1146 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04D52BC727F6CCA4007D1146 /* Assets.xcassets */; };
 		04D52BCB27F6CCA4007D1146 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04D52BC927F6CCA4007D1146 /* LaunchScreen.storyboard */; };
@@ -19,6 +21,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		04C3F3F727FE2ED300DF2F31 /* Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cell.swift; sourceTree = "<group>"; };
+		04C3F3F827FE2ED300DF2F31 /* Cell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Cell.xib; sourceTree = "<group>"; };
 		04D52BBB27F6CCA4007D1146 /* PrayerTime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PrayerTime.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04D52BBE27F6CCA4007D1146 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04D52BC727F6CCA4007D1146 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -84,6 +88,7 @@
 				04D52BD527F6CD12007D1146 /* TabBar.swift */,
 				04D52BD727F6CD31007D1146 /* MainVC.swift */,
 				04D52BDB27F6CDA7007D1146 /* SettingsVC.swift */,
+				04C3F3F727FE2ED300DF2F31 /* Cell.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -93,6 +98,7 @@
 			children = (
 				04D52BD827F6CD31007D1146 /* MainVC.xib */,
 				04D52BDC27F6CDA7007D1146 /* SettingsVC.xib */,
+				04C3F3F827FE2ED300DF2F31 /* Cell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -110,7 +116,6 @@
 				1626B576B9CFBD7F60D1E4B5 /* Pods-PrayerTime.debug.xcconfig */,
 				0BA376CABCB1CD4536413C0C /* Pods-PrayerTime.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -183,6 +188,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				04D52BDA27F6CD31007D1146 /* MainVC.xib in Resources */,
+				04C3F3FA27FE2ED300DF2F31 /* Cell.xib in Resources */,
 				04D52BDE27F6CDA7007D1146 /* SettingsVC.xib in Resources */,
 				04D52BCB27F6CCA4007D1146 /* LaunchScreen.storyboard in Resources */,
 				04D52BC827F6CCA4007D1146 /* Assets.xcassets in Resources */,
@@ -240,6 +246,7 @@
 			files = (
 				04D52BBF27F6CCA4007D1146 /* AppDelegate.swift in Sources */,
 				04D52BDD27F6CDA7007D1146 /* SettingsVC.swift in Sources */,
+				04C3F3F927FE2ED300DF2F31 /* Cell.swift in Sources */,
 				04D52BD927F6CD31007D1146 /* MainVC.swift in Sources */,
 				04D52BD627F6CD12007D1146 /* TabBar.swift in Sources */,
 			);
