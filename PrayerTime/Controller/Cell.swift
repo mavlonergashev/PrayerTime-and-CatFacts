@@ -8,14 +8,14 @@
 import UIKit
 
 protocol CellDelete {
-    func deleteCell(index: Int)
+    func deleteCell(index: IndexPath)
 }
 
 class Cell: UITableViewCell {
 
     @IBOutlet weak var factLbl: UILabel!
     var delegate: CellDelete?
-    var index: Int?
+    var index: IndexPath?
 
     func setCell(text: String) {
         factLbl.text = text

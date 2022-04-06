@@ -48,7 +48,7 @@ extension SettingsVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! Cell
         cell.setCell(text: dataFacts[indexPath.row])
-        cell.index = indexPath.row
+        cell.index = indexPath
         cell.delegate = self
         return cell
     }
@@ -70,8 +70,9 @@ extension SettingsVC {
 //MARK: - DeleteCell Protocol
 
 extension SettingsVC: CellDelete {
-    func deleteCell(index: Int) {
-        self.dataFacts.remove(at: index)
+    func deleteCell(index: IndexPath) {
+        self.dataFacts.remove(at: index.row)
+        self.tableView.deleteRows(at: [index], with: .top)
         self.tableView.reloadData()
     }
 }
@@ -112,12 +113,27 @@ extension SettingsVC {
             if let count = alertVC.textFields?.first?.text {
                 self.getFacts(count: Int(count) ?? 0)
             }
+            
+            
         }
         let cancelAction = UIAlertAction(title: "Cancel", style: .destructive) { _ in
             // print("Cancel tapped")
         }
         alertVC.addAction(addAction)
         alertVC.addAction(cancelAction)
+        present(alertVC, animated: true, completion: nil)
+    }
+}
+
+//MARK: - ShowAlert
+
+extension SettingsVC {
+    func showAlert(text: String) {
+        let alertVC = UIAlertController(title: "Warning", message: text, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "Ok", style: .default) { _ in
+            // print("Ok tapped")
+        }
+        alertVC.addAction(okAction)
         present(alertVC, animated: true, completion: nil)
     }
 }
