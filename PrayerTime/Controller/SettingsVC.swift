@@ -20,14 +20,7 @@ class SettingsVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        title = "Facts about cats"
-        navigationController?.navigationBar.tintColor = .orange
-        
-        let add = UIBarButtonItem(title: "+ Add Fact", style: .done, target: self, action: #selector(addAFact))
-        navigationItem.leftBarButtonItem = add
-        
-        let more = UIBarButtonItem(title: "More Facts +", style: .done, target: self, action: #selector(addMoreFacts))
-        navigationItem.rightBarButtonItem = more
+
         }
     
     @objc func addAFact() {
@@ -51,6 +44,23 @@ extension SettingsVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! Cell
         return cell
+    }
+    
+}
+
+//MARK: - Set Nav Bar
+
+extension SettingsVC {
+    
+    func setNavBar() {
+        title = "Facts about cats"
+        navigationController?.navigationBar.tintColor = .orange
+        
+        let add = UIBarButtonItem(title: "+ Add Fact", style: .done, target: self, action: #selector(addAFact))
+        navigationItem.leftBarButtonItem = add
+        
+        let more = UIBarButtonItem(title: "More Facts +", style: .done, target: self, action: #selector(addMoreFacts))
+        navigationItem.rightBarButtonItem = more
     }
     
 }

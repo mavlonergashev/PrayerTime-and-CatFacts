@@ -5,6 +5,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -78,14 +79,41 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mu9-j8-pjK">
+                                <rect key="frame" x="399" y="0.0" width="20" height="20"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rtk-CX-wuC">
+                                        <rect key="frame" x="3" y="3" width="14" height="14"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" image="xmark" catalog="system"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemRedColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="20" id="HB1-aV-2OR"/>
+                                    <constraint firstAttribute="bottom" secondItem="rtk-CX-wuC" secondAttribute="bottom" constant="3" id="VHE-jC-D52"/>
+                                    <constraint firstAttribute="height" constant="20" id="dtg-xA-gzp"/>
+                                    <constraint firstItem="rtk-CX-wuC" firstAttribute="leading" secondItem="Mu9-j8-pjK" secondAttribute="leading" constant="3" id="m2f-TQ-tCw"/>
+                                    <constraint firstItem="rtk-CX-wuC" firstAttribute="top" secondItem="Mu9-j8-pjK" secondAttribute="top" constant="3" id="uhc-w0-4N1"/>
+                                    <constraint firstAttribute="trailing" secondItem="rtk-CX-wuC" secondAttribute="trailing" constant="3" id="zrk-Il-haW"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="9Sb-qW-gKu" firstAttribute="top" secondItem="tAL-xn-dIL" secondAttribute="top" constant="5" id="0id-ey-KRI"/>
                             <constraint firstItem="9Sb-qW-gKu" firstAttribute="leading" secondItem="tAL-xn-dIL" secondAttribute="leading" constant="10" id="cUM-Xg-usc"/>
+                            <constraint firstAttribute="trailing" secondItem="Mu9-j8-pjK" secondAttribute="trailing" constant="5" id="kEa-ia-05j"/>
                             <constraint firstAttribute="trailing" secondItem="9Sb-qW-gKu" secondAttribute="trailing" constant="10" id="paH-uU-sbq"/>
                             <constraint firstAttribute="bottom" secondItem="9Sb-qW-gKu" secondAttribute="bottom" constant="5" id="tZe-7d-SqI"/>
                             <constraint firstItem="0hg-BL-XQA" firstAttribute="width" secondItem="tAL-xn-dIL" secondAttribute="width" multiplier="0.256637" id="vH2-ui-miq"/>
+                            <constraint firstItem="Mu9-j8-pjK" firstAttribute="top" secondItem="tAL-xn-dIL" secondAttribute="top" id="xAT-hw-YXB"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -104,5 +132,9 @@
     </objects>
     <resources>
         <image name="paw" width="2997" height="2727"/>
+        <image name="xmark" catalog="system" width="128" height="113"/>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
     </resources>
 </document>
