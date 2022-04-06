@@ -7,21 +7,22 @@
 
 import UIKit
 
+protocol CellDelete {
+    func deleteCell(index: Int)
+}
+
 class Cell: UITableViewCell {
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
+    @IBOutlet weak var factLbl: UILabel!
+    var delegate: CellDelete?
+    var index: Int?
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    func setCell(text: String) {
+        factLbl.text = text
     }
     
-    func setCell(text: String) {
-        
+    @IBAction func deleteTapped(_ sender: Any) {
+        delegate?.deleteCell(index: index!)
     }
     
 }

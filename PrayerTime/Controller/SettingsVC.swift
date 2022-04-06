@@ -6,6 +6,9 @@
 //
 
 import UIKit
+import Alamofire
+import SwiftyJSON
+import SwiftSpinner
 
 class SettingsVC: UIViewController {
 
@@ -17,9 +20,11 @@ class SettingsVC: UIViewController {
         }
     }
     
+    var dataFacts: [String] = ["Cats are friend for people"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        setNavBar()
 
         }
     
@@ -38,11 +43,16 @@ class SettingsVC: UIViewController {
 extension SettingsVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 6
+        return dataFacts.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! Cell
+        
+        cell.setCell(text: dataFacts[indexPath.row])
+        cell.index = indexPath.row
+        cell.delegate = self
+        
         return cell
     }
     
@@ -61,6 +71,27 @@ extension SettingsVC {
         
         let more = UIBarButtonItem(title: "More Facts +", style: .done, target: self, action: #selector(addMoreFacts))
         navigationItem.rightBarButtonItem = more
+    }
+    
+}
+
+//MARK: - DeleteCell Protocol
+
+extension SettingsVC: CellDelete {
+    
+    func deleteCell(index: Int) {
+        self.dataFacts.remove(at: index)
+        self.tableView.reloadData()
+    }
+    
+}
+
+//MARK: - API Get Facts
+
+extension SettingsVC {
+    
+    func getFacts(count: Int) {
+        
     }
     
 }

@@ -87,6 +87,9 @@
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" image="xmark" catalog="system"/>
+                                        <connections>
+                                            <action selector="deleteTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="amJ-G4-G1e"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemRedColor"/>
@@ -127,6 +130,9 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="factLbl" destination="nqo-Kt-JLb" id="dkO-jb-jLC"/>
+            </connections>
             <point key="canvasLocation" x="213.04347826086959" y="112.16517857142857"/>
         </tableViewCell>
     </objects>
